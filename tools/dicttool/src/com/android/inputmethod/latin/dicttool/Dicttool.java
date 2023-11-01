@@ -90,6 +90,9 @@ public class Dicttool {
     private static void help() {
         System.out.println("Syntax: dicttool <command [arguments]>\nAvailable commands:\n");
         for (final String commandName : sCommands.keySet()) {
+            if (commandName == "test") {
+                continue;
+            }
             System.out.println("*** " + commandName);
             System.out.println(getCommandInstance(commandName).getHelp());
             System.out.println("");
